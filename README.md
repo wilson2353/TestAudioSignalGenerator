@@ -5,10 +5,10 @@ All the audio files are mp3 formet during GitHub limitation. Use the SignalGener
 
 The Generator have different test audio list as below.
 
-Noise: Pink noise, White noise, Brown noise
+  Noise: Pink noise, White noise, Brown noise
 
-Speaker Polarity test audio
+  Speaker Polarity test audio
 
-Sweep signal
+  Sweep signal
 
-Tone: 100Hz, 250Hz, 440Hz, 1kHz, 10kHz
+  Tone: 100Hz, 250Hz, 440Hz, 1kHz, 10kHz
