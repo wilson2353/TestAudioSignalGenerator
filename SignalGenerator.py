@@ -19,36 +19,36 @@ b_frame = LabelFrame(text="Control", bg="Black", fg="White", width=300, height=6
 b_frame.place(x=0,y=140)
 
 # Create Menu button for Tone Selection
-m_btn = Menubutton(root, relief="raised", bg="Grey", fg="White", font=("Georgia", 13), width=7, activebackground="Grey", activeforeground="White")
+m_btn = Menubutton(root, relief="raised", text='Tone', bg="Grey", fg="White", font=("Georgia", 13), width=7, activebackground="Grey", activeforeground="White")
 menu = Menu(m_btn, tearoff=0)
 m_btn["menu"] = menu
-m_btn.place(x=200,y=95)
+m_btn.place(x=200,y=100)
 
 # Create Audio Control Buttons
 play_btn = Button(b_frame, text='Play', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.play(loops=-1))
-play_btn.place(x=20,y=160)
+play_btn.place(x=20,y=2)
 
 stop_btn = Button(b_frame, text='Stop', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.stop())
-stop_btn.place(x=200,y=160)
+stop_btn.place(x=200,y=2)
 
 # Test Audio
 pink_noise = Button(f_frame, text='Pink', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.load("mp3/PinkNoise.mp3"))
-pink_noise.place(x=20,y=55)
+pink_noise.place(x=20,y=5)
 
 white_noise = Button(f_frame, text='White', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.load("mp3/WhiteNoise.mp3"))
-white_noise.place(x=110,y=55)
+white_noise.place(x=110,y=5)
 
 brown_noise = Button(f_frame, text='Brown', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.load("mp3/BrownNoise.mp3"))
-brown_noise.place(x=200,y=55)
+brown_noise.place(x=200,y=5)
 
 polarity = Button(f_frame, text='Polarity', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.load("mp3/PolaritySignal.mp3"))
-polarity.place(x=20,y=95)
+polarity.place(x=20,y=45)
 
 sweep = Button(f_frame, text='Sweep', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.load("mp3/sweep.mp3"))
-sweep.place(x=110,y=95)
+sweep.place(x=110,y=45)
 
 # Options for Tone Selection
-menu.add_command(label='100Hz', command=lambda: mixer.music.load("mp3/1--Hz.mp3"))
+menu.add_command(label='100Hz', command=lambda: mixer.music.load("mp3/100Hz.mp3"))
 menu.add_command(label='250Hz', command=lambda: mixer.music.load("mp3/250Hz.mp3"))
 menu.add_command(label='440Hz', command=lambda: mixer.music.load("mp3/440Hz.mp3"))
 menu.add_command(label='1kHz', command=lambda: mixer.music.load("mp3/1kHz.mp3"))
