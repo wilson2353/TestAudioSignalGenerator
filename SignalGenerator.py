@@ -1,5 +1,6 @@
 from tkinter import *
 import pygame.mixer as mixer
+import math
 
 # Init mixer
 mixer.init()
@@ -30,6 +31,23 @@ play_btn.place(x=20,y=2)
 
 stop_btn = Button(b_frame, text='Stop', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.stop())
 stop_btn.place(x=200,y=2)
+
+def mute():
+    volume = mixer.music.get_volume
+    if mute_btn["text"] == 'Unmute':
+        mixer.music.set_volume(0.0) 
+        mute_btn['text'] = 'Muted'
+        mute_btn['bg'] = 'Red'
+        print(volume)
+    elif mute_btn["text"] == 'Muted':
+        mixer.music.set_volume(1.0)
+        mute_btn['text'] = 'Unmute'
+        mute_btn['bg'] = 'Grey'
+        print(volume)
+    else: return
+
+mute_btn = Button(b_frame, text='Unmute', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mute())
+mute_btn.place(x=110,y=2)
 
 # Test Audio
 pink_noise = Button(f_frame, text='Pink', font=("Georgia", 13), bg="Grey", fg="White", width=7, command=lambda: mixer.music.load("mp3/PinkNoise.mp3"))

@@ -1,0 +1,6 @@
+# ignore the pyinstaller generated folder
+build/
+dist/
+
+# ignore the spec file gernerated by pyinstaller
+.spec
